@@ -2,7 +2,7 @@
 <Configuration status="OFF">
   <Appenders>
     <!-- 输出到文件 -->
-    <File name="file" fileName="d:/myapp.log" append="true">
+    <File name="file" fileName="/Users/tangfangbin/myapp.log" append="true">
       <PatternLayout pattern="%d %-5p %c - %m%n"/>
     </File>
     

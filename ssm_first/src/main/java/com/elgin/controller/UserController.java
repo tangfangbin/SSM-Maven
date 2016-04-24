@@ -54,7 +54,7 @@ public class UserController {
 		}
 		if (result > 0) {
 			logger.info("注册成功..");
-			response.sendRedirect("/allUser.jhtml");
+			response.sendRedirect("/ssm_first/allUser.jhtml");
 		} else {
 			logger.error("注册失败");
 			request.getRequestDispatcher("/500.jhtml").forward(request, response);
@@ -103,7 +103,7 @@ public class UserController {
 		int result = userService.updateUser(user);
 		if (result > 0) {
             logger.info("更新用户数据成功");
-			response.sendRedirect("/allUser.jhtml");
+			response.sendRedirect("/ssm_first/allUser.jhtml");
 
 		} else {
             logger.error("更新用户数据失败");
@@ -125,7 +125,7 @@ public class UserController {
 		int result = userService.deleteUser(Integer.parseInt(id));
 		if (result > 0) {
             logger.info("删除用户数据成功..");
-			response.sendRedirect("/allUser.jhtml");
+			response.sendRedirect("/ssm_first/allUser.jhtml");
 
 		} else {
             logger.error("删除用户数据失败..");
