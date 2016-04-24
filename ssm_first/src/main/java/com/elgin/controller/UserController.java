@@ -25,6 +25,13 @@ public class UserController {
 	private UserService userService;
 
 	
+	@RequestMapping(value="/") 
+	public String index(ModelMap mm) {
+		List<User> list = userService.getUserList();
+		mm.put("list", list);
+		return "/userlist";
+	}
+	
 	/**
 	* @Title: addPage
 	* @Description: 用户添加页面
